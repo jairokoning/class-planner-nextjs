@@ -80,3 +80,32 @@ Professor -- (Filter Lessons by Subject)
 Professor -- (Filter Lessons by Classroom)
 @enduml
 ```
+
+## Subject usecase
+```
+@startuml
+title Usecase diagram
+header Class Planner
+skinparam actorStyle awesome
+left to right direction
+
+rectangle Subject {
+ (Create new Subject) as create
+ (Update Subject) as update
+ (Disable Subject) as disable
+ (Enable Subject) as enable
+ (List Subjects) as list
+}
+
+:Coordinator:
+:Professor:
+
+Coordinator -> Professor
+Professor -- create
+Professor -- update
+Professor -- disable
+Professor -- enable
+Professor -- list
+
+@enduml
+```
